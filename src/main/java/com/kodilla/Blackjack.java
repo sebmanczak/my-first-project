@@ -68,12 +68,14 @@ public class Blackjack extends Application {
     }
 
     public void newHand() {
+        // check if we should shuffle
         if (deck.getNumberOfCardsRemaining() <= deck.getSizeOfDeck() * 0.2) {
             newDeck();
         }
 
+        //clear everything
         hand.discardHand();
-        dealer.discardDealer();
+        dealer.discardHand();
         cards.getChildren().removeAll(cards.getChildren());
         dealerCards.getChildren().removeAll(dealerCards.getChildren());
         totalLabel.setText("");
@@ -82,6 +84,7 @@ public class Blackjack extends Application {
         busted = false;
         playerTurn = true;
 
+        //draw cards for the initial hands, player gets 2, dealer 1
         drawCard(hand, cards, totalLabel);
         drawCard(dealer, dealerCards, totalLabelDealer);
         drawCard(hand, cards, totalLabel);
@@ -91,6 +94,7 @@ public class Blackjack extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // Update all text colors and fonts
         totalLabel.setFont(new Font("Arial", 24));
         totalLabel.setTextFill(Color.web("#FFF"));
 
@@ -117,6 +121,7 @@ public class Blackjack extends Application {
                 drawCard(hand, cards, totalLabel);
 
                 if (hand.evaluateHand() > 21) {
+                    // you are busted
                     System.out.println("Przegrales");
                     busted = true;
                     playerTurn = false;
