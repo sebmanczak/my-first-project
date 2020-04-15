@@ -15,7 +15,10 @@ public class Card {
     }
 
     public static String getFilename(Suit suit, Rank rank) {
-        return "file:resources/cards/" + rank.getSymbol() + suit.getSymbol() + ".gif";
+        String fileName = "cards/" + rank.getSymbol() + suit.getSymbol() + ".png";
+        System.out.println(fileName);
+        return fileName;
+        //return "cards/" + rank.getSymbol() + suit.getSymbol() + ".png";
     }
 
     public Suit getSuit() {
@@ -33,7 +36,7 @@ public class Card {
             return Integer.parseInt(rank);
         } catch (Exception ex) {
             //we failed so it is a letter
-            if(rank.equals("a")) {
+            if(rank.equals("A")) {
                 //it is an ace
                 return 11;
             } else {

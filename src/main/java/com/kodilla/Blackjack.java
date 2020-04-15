@@ -170,8 +170,8 @@ public class Blackjack extends Application {
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
-        grid.setHgap(5.5);
-        grid.setVgap(5.5);
+        grid.setHgap(8);
+        grid.setVgap(8);
 
         grid.add(dealerCards, 0, 0, 3, 1);
         grid.add(dealerLbl, 0, 1);
