@@ -2,26 +2,26 @@ package com.kodilla;
 
 public class Player {
     private String name;
-    private double playersMoney;
+    private double playerMoney;
 
-    public Player(String name, double playersMoney) {
+    public Player(String name, double playerMoney) {
         this.name = name;
-        this.playersMoney = playersMoney;
+        this.playerMoney = playerMoney;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getPlayersMoney() {
-        return playersMoney;
+    public double getPlayerMoney() {
+        return playerMoney;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setPlayersMoney(double playersMoney) {
-        this.playersMoney = playersMoney;
+    public void setPlayersMoney(double playerMoney) {
+        this.playerMoney = playerMoney;
     }
 }

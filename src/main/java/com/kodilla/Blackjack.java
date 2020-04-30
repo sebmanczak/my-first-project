@@ -197,9 +197,9 @@ public class Blackjack extends Application {
         });
 
         playerNameLabel.setText("Pieniadze gracza: " + player.getName());
-        playersMoneyLabel.setText("" + player.getPlayersMoney());
+        playersMoneyLabel.setText("" + player.getPlayerMoney());
 
-        betCommand.setText("Wartosc do obstawienia: ");
+        betCommand.setText("Wprowadz wartosc do obstawienia: ");
 
         croupierNameLabel.setText("Pieniadze krupiera: ");
         croupiersMoneyLabel.setText("" + croupier.getCroupierMoney());
